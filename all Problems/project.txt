@@ -1,0 +1,67 @@
+/////////////////////###############PROJECT###################/////////////////
+
+
+//custmize virtual file system(besed on the file)ith aapn c use kru
+//file packer unpacker(based on the memory)ith aapn java use kru
+//process monitoring tool "procmon"(based on the process)ith aapn c++ use kru aani ith aapn win 32 sdk hi techknowlogy use kru.windows madhe khup APIs ahet internally mhnje functions ahet ki te aaplya je pahijel te krun detat
+//create tool help 32 snapshot he ekch function aapn prockmon ya project madhe use krnar ahot.
+//windows madhe DLL ast (dynamic link libarary).
+//process list, threads list, DLL list, process search, process kill krel, process cha log kadhel hi sgli kam aapla
+//project krel mhnje yasathi aapn ha project krtoy prockmon.
+//aapn ya project madhe 3 class lihu 1 process info yat sgle process che function yetil, 2 threads info yat sgle threads che function yetil, 3 DLL info yat sgle DLL che function yetil baki je 3 function ahet tyana aapn neked theu
+//mhnje class chya baher process kill,process search,process log find he function aapn ughde theu.
+//ya project madhla first API ahe create tool help 32 snapshot ha ahe jo aapn use krnar ahe. snapshot mhnje photo 
+//mg yat aapn sangu shkto ki kshacha photo process cha ki threads cha ki DLL cha. yat pudhche API ahe process32First
+//aani process32Next he ahet.
+//ha aapla project cui vr asel gui vr nahi tr aaplyala koni vicharl ki gui ka nahi tr tyach ans ahe ki ha project use krnara end user nsel tr to technical persion asel ki jyala command kltat.
+//cis internal suit by mark russionvich yane he cis internal suit create kel ahe ya suit madhe aapn jo project krtoy to aadhi krun thevlay but tyachi ji exe ahe ti  graphical form madhe ahe aapn js ya project madhe 6 features detoy 
+//process list, threads list, process kill, process log ase tr tya suit madhe ase 40 features ahet.
+//programs,process,thread,DLL he windows internals ya book madhe ahe tyatun read kra.
+
+//////////////////###############synopsys#################///////////////////
+
+//Name:Procmon
+//platform:windows NT os(every os from windows xp comes under windows NT)
+//Arciterture:it requires 32 bit process with minimum of 512mb ram.
+//tech:WIN32 SDK(its 32 bit appliction devlopment c/c++)
+//programin language: c++ on windows .
+//FrontEnd:CUI
+//BackEnd:netive application program in c++.
+//discription:1 this project works on windows platform which is used to retrive infomation of all running process and its dependenceys 
+//baki points LB 12112019 14t ya recording madhe ahe 2.00.00 pasun pudh.
+//
+//create process function jevha aapn open kru google vrun tevha tith create processA as yeil A for ascci aani dusr
+//create processW W for wild card.
+//windows internal ya book madhl 1st and 5th chapter read kraych.
+
+///###required concepts for the project:-
+
+	1 Program:-	static set of instructions written by the programer(normal code) is called as program
+as a program is in human readable format it is not diractly exicutable.
+	2 Toolchain:-	it is used to convert our human understandable program into a machin understandable process
+	3 Process:-	running instance of a program is called as a process when we dubble click our .exe file
+then it gets loadade into ram and it becomes a process
+	4 Thread:-	it is considerd as a lite waight process a smallest part of a process is called as thread.
+	5 DLL:-		it is called as Dynamic Link Libarary if contains the set of functions which can be called 
+by any other process.
+
+pratek process vr pages astat aani hardisk vrti block astat.
+
+////////##########DLL Names##########///////////
+1.GDI 32.DLL
+2.KERNEL 32.DLL(yach DLL madhe te function ahe ki je aapn aplya project madhe use krnar ahe create tool help 32 
+snapshot he function ahe.)
+
+	threads
+	   |
+	process
+           |
+	   OS
+	   |
+	  Ram
+ps -a display all info as process,thread,dll
+ps -d display info of threds
+ps -d display info of dlls
+search process name search a specific process
+kill process name treminate the spicific process
+log - use to create log file of all running processes

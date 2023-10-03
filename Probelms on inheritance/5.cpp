@@ -1,0 +1,107 @@
+#include<iostream>
+
+
+using namespace std;
+
+
+class Demo
+{
+	public:
+		int i;
+		int j;
+	Demo()
+	{
+		i = 100;
+		j = 200;
+		cout<<"Base Constructor:"<<"\n";
+	}
+	void fun(int k)
+	{
+		i++;
+		cout<<i<<"\n";
+		cout<<"Base Fun 1:"<<"\n";
+		cout<<k<<"\n";
+	}
+	void fun()
+	{
+		i--;
+		cout<<i<<"\n";
+		cout<<"Base Fun 2:"<<"\n";
+	}
+	~Demo()
+	{
+		cout<<"Base Destructor:"<<"\n";
+	}
+};
+class Hello:public Demo
+{
+	public:
+		int k;
+		int l;
+	Hello()
+	{
+		k = 500;
+		l = 600;
+		cout<<"Derived 1 Constructor"<<"\n";
+	}
+	void gun(int no)
+	{
+		j++;
+		cout<<j<<"\n";
+		cout<<"Derived 1 Gun 1:"<<"\n";
+	}
+	void gun()
+	{
+		cout<<l<<"\n";
+		cout<<"Derived 2 gun 2"<<"\n";
+	}
+	~Hello()
+	{
+		cout<<"Derived 1 Destructor:"<<"\n";
+	}
+};
+class pucsd:Demo
+{
+	public:
+		int a;
+		int b;
+	pucsd()
+	{
+		a = 1200;
+		b = 1300;
+		cout<<"Derived 2 Constructor:"<<"\n";
+	}
+	int run(int p, int q)
+	{
+		int x = p + q;
+		cout<<"Derived 2 run 1:"<<"\n";
+		return x;
+	}
+	int run()
+	{
+		cout<<a<<"\n";
+		cout<<i<<"\n";
+		cout<<"Derived 2 run 2:"<<"\n";
+		return 0;
+	}
+	~pucsd()
+	{
+		cout<<"Desived 2 Destructor:"<<"\n";
+	}
+};
+int main()
+{
+	Demo dobj;
+	dobj.fun(15);
+	cout<<dobj.j<<"\n";
+
+	Hello hobj;
+	hobj.gun(11);
+	hobj.fun();
+	cout<<hobj.i<<"\n";
+
+	pucsd pobj;
+	int iRet = pobj.run();
+	cout<<iRet<<"\n";
+
+}

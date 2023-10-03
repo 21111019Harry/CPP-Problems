@@ -1,0 +1,10 @@
+///////#######=====Matrix=====######////////
+Matrix che 2 type padtat
+1 square matrix
+2 non square matrix(no of rows and no of clomans same nastat)
+
+In this topic we perform the operation on matrix (2 dimensional array).
+Their are some problem statement where we can perform the operation on single matrix and in some problem statement
+we perform the operation on more than 1 matrices.
+their are some problem statements where we have to consider square matrix where no. of rows and no. of coloumns are same.
+we can solve the problem on matrices in any lang bcz every lang supports concept of array.
